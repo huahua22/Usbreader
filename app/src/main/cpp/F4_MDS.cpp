@@ -147,3 +147,13 @@ Java_com_xwr_usbreader_dev_usbapi_UsbApi_Syn_1Get_1Card(JNIEnv *env, jclass type
     env->ReleaseByteArrayElements(cardInfo_, cardInfo, 0);
     return ret;
 }
+
+extern "C"
+JNIEXPORT jlong JNICALL
+Java_com_xwr_usbreader_dev_usbapi_UsbApi_Syn_1Select_1Card(JNIEnv *env, jclass type) {
+
+    jlong ret;
+    ret = Syn_Select_Card(env);
+    return ret;
+
+}

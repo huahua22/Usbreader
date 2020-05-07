@@ -68,8 +68,9 @@ public class UsbUtil {
         int temp = mUsbDevice.getVendorId();
         break;
       }
+      mUsbDevice = null;
     }
-    if (mUsbDevice!=null) {
+    if (mUsbDevice != null) {
       //获取设备接口
       for (int i = 0; i < mUsbDevice.getInterfaceCount(); ) {
         // 一般来说一个设备都是一个接口，你可以通过getInterfaceCount()查看接口的个数

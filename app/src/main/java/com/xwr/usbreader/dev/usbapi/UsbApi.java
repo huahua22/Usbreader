@@ -40,6 +40,6 @@ public class UsbApi {
 
 
   public static native long Syn_Find_Card();
-
+  public static native long Syn_Select_Card();
   public static native long Syn_Get_Card(byte[] cardInfo);
 }

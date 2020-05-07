@@ -7,13 +7,20 @@
 	android:layout_height="match_parent"
 	tools:context=".activity.UIdActivity">
 
-	<TextView
-		android:id="@+id/tvOutput"
-		android:layout_width="fill_parent"
-		android:layout_height="fill_parent"
-		android:background="#D0D0D0"
-		android:scrollbars="vertical"
-		android:singleLine="false"/>
+	<ScrollView
+		android:id="@+id/tv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:scrollbars="none">
+
+		<TextView
+			android:id="@+id/tvOutput"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:focusable="true"
+			android:focusableInTouchMode="true"/>
+	</ScrollView>
 
 	<!--<TextView-->
 	<!--android:id="@+id/tv_title"-->
@@ -48,18 +55,30 @@
 		android:id="@+id/btnleft01"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_alignRight="@id/tvOutput"
+		android:layout_alignRight="@id/tv"
+		android:layout_alignParentRight="true"
 		android:text="开始"
 		/>
 
-	<!--<Button-->
-	<!--android:id="@+id/btnleft02"-->
-	<!--android:layout_width="wrap_content"-->
-	<!--android:layout_height="wrap_content"-->
-	<!--android:layout_below="@id/btnleft01"-->
-	<!--android:layout_alignRight="@id/tvOutput"-->
-	<!--android:text="暂停"-->
-	<!--/>-->
+	<Button
+		android:id="@+id/btnleft02"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/btnleft01"
+		android:layout_alignRight="@id/tv"
+		android:layout_alignParentRight="true"
+		android:text="循环"
+		/>
+
+	<Button
+		android:id="@+id/btnleft03"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/btnleft02"
+		android:layout_alignRight="@id/tv"
+		android:layout_alignParentRight="true"
+		android:text="暂停"
+		/>
 
 	<!--<ImageView-->
 	<!--android:id="@+id/ivTest"-->
